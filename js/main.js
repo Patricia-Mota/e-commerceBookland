@@ -1,20 +1,38 @@
 // Proyecto E-commerce Bookland
 
+const librosDisponibles = [
+  {
+    nombre: "¿Por qué dormimos?",
+    precio: 360,
+  },
+  {
+    nombre: "Hábitos atómicos",
+    precio: 299,
+  },
+  {
+    nombre: "El diseño de las cosas cotidianas",
+    precio: 625,
+  },
+  {
+    nombre: "Una chica como ella",
+    precio: 200,
+  },
+  {
+    nombre: "Un bárbaro en París",
+    precio: 350,
+  },
+];
+
 // Preguntarle al usuario qué libro quiere adquirir
 let repetir = true;
 while (repetir) {
+  const nombresLibros = librosDisponibles.map((libro) => libro.nombre);
+  let listaDeLibros = nombresLibros.join("\n- ");
+  listaDeLibros = "\n- " + listaDeLibros;
+
   const seleccionLibro = prompt(
     "¡Hola, bienvenida! Por favor coloca el nombre del libro que quieres adquirir. Tenemos los siguientes títulos disponibles:" +
-      "\n" +
-      "-¿Por qué dormimos?" +
-      "\n" +
-      "-Hábitos atómicos" +
-      "\n" +
-      "-El diseño de las cosas cotidianas" +
-      "\n" +
-      "-Una chica como ella" +
-      "\n" +
-      "-Un bárbaro en París"
+      listaDeLibros
   );
 
   // Precios de cada libro
@@ -43,17 +61,13 @@ while (repetir) {
 
 // Función para obtener el precio del libro
 function obtenerPrecioLibro(libroSeleccionado) {
-  if (libroSeleccionado == "¿Por qué dormimos?") {
-    return 360;
-  } else if (libroSeleccionado == "Hábitos atómicos") {
-    return 299;
-  } else if (libroSeleccionado == "El diseño de las cosas cotidianas") {
-    return 625;
-  } else if (libroSeleccionado == "Una chica como ella") {
-    return 200;
-  } else if (libroSeleccionado == "Un bárbaro en París") {
-    return 350;
-  }
+  const libroEncontrado = librosDisponibles.find(
+    (libro) => libro.nombre === libroSeleccionado
+  );
 
-  return 0;
+  if (libroEncontrado) {
+    return libroEncontrado.precio;
+  } else {
+    return 0;
+  }
 }
