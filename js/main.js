@@ -24,6 +24,7 @@ const librosDisponibles = [
 ];
 
 // Preguntarle al usuario qué libro quiere adquirir
+let totalAcumulado = 0;
 let repetir = true;
 while (repetir) {
   const nombresLibros = librosDisponibles.map((libro) => libro.nombre);
@@ -47,10 +48,14 @@ while (repetir) {
       "¿Deseas adquirirlo?"
   );
 
-  // Respuesta: Sí - Agradecimiento de compra
+  // Respuesta: Sí - Sumar al total
   if (decisionCompra == true) {
-    alert("¡Gracias por comprar en nuestra tienda en línea!");
-    repetir = false;
+    totalAcumulado = suma(totalAcumulado, precioLibro);
+    repetir = confirm(
+      "Su total actual es de: $" +
+        totalAcumulado +
+        ".00 MXN. ¿Deseas adquirir otro título?"
+    );
   }
 
   // Respuesta: No - ¿Deseas adquirir otro título?
@@ -58,6 +63,12 @@ while (repetir) {
     repetir = confirm("¿Deseas adquirir otro título?");
   }
 }
+
+alert(
+  "¡Gracias por comprar en nuestra tienda en línea! Su total fue de: $" +
+    totalAcumulado +
+    ".00 MXN"
+);
 
 // Función para obtener el precio del libro
 function obtenerPrecioLibro(libroSeleccionado) {
@@ -70,4 +81,8 @@ function obtenerPrecioLibro(libroSeleccionado) {
   } else {
     return 0;
   }
+}
+
+function suma(totalAcumulado, precioLibro) {
+  return totalAcumulado + precioLibro;
 }
