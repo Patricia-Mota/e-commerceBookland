@@ -1,0 +1,79 @@
+/* Estilos página de libros */
+
+.bannersLibros {
+    width: 100%;
+}
+
+.carousel-item {
+    height: 48vh;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Responsive Novedades Celulares */
+@media (max-width: 576px) {
+ 
+    #section-novedades {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 40%;
+        margin: 40px auto;
+
+    }
+
+    
+    .N-books-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #section-best-sellers {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+
+    }
+}
+
+
+
+/* Responsive Novedades Tablets */
+@media (max-width: 768px) {
+
+    #section-novedades {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 40%;
+        margin: 40px auto;
+
+    }
+
+    
+    .N-books-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #section-best-sellers {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+  
+
+}

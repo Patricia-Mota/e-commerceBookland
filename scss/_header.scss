@@ -1,0 +1,81 @@
+/* Estilos del Header */
+header{
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 0;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
+
+/* Estilos nav */
+.navbar {
+    text-align: center;
+}
+
+
+.navbar-menu {
+    list-style: none;
+    margin: 10px;
+}
+
+.link-navbar {
+    text-decoration: none;
+    font-size: 14px;
+    color: #1F3F66;
+}
+
+.ul-gap {
+    gap: 48px;
+}
+
+.carrito-mi-cuenta-wrapper {
+    display: flex;
+    align-items: end;
+}
+
+.nl {
+    color: $color-nav-link !important;
+    position: relative;
+}
+
+.nl::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 8px;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background-color: $color-nav-link;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nl:hover::before {
+    transform: scaleX(1);
+
+}
+
+.nl.active {
+    font-weight: $weight-font-nav-link-active;
+}
+
+/* Responsive Header Mobile */
+
+/*
+@media screen and (max-width: 576px) {
+    .carrito-mi-cuenta-wrapper {
+        position: relative;
+        left: 105px;
+        text-align: center;
+        margin-top: 48px;
+    }
+
+} */
+
+/* Responsive Header Tablets */
+/*
+@media (max-width: 768px) {
+    
+} */

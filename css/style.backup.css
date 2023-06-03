@@ -1,0 +1,769 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+
+
+/* Estilos del Header */
+header{
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+/* Estilos nav */
+
+.navbar {
+    text-align: center;
+}
+
+
+.navbar-menu {
+    list-style: none;
+    margin: 10px;
+}
+
+.link-navbar {
+    text-decoration: none;
+    font-size: 14px;
+    color: #1F3F66;
+}
+
+.ul-gap {
+    gap: 24px;
+}
+
+.carrito-mi-cuenta-wrapper {
+    display: flex;
+    align-items: end;
+}
+
+/* Estilos de la Hero Home */
+
+section {
+    height: 100vh;
+}
+
+.hero-image-home img {
+    width: 100%;
+    max-width: 430px;
+    margin-left: -100px;
+}
+
+#hero-home {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 60px);
+    width: 100%;
+}
+
+.hero-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-text-wrapper div:first-child{
+    max-width: 580px;
+}
+
+.title-hero-home {
+    font-size: 64px;
+    font-weight: bold;
+    color: #1F3F66;
+    margin-bottom: 16px;
+}
+
+.home-paragraph-wrapper {
+    max-width: 500px;
+}
+
+.hero-image-home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.book-image {
+    object-fit: cover;
+    height: 100%;
+    box-shadow: 5px 6px 5px 1px rgba(0,0,0,0.31);
+}
+.cta-btn {
+    background-color: #1F3F66;
+    margin-top: 40px;
+    border: 0;
+    border-radius: 32px;
+    padding: 12px 32px;
+}
+
+.cta-btn:hover, .cta-btn:active {
+    background-color: #9CBFE9 !important;
+}
+
+.hero-dots-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-wavys-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/img/SVGs/hero-wavy-shapes.svg");
+    background-size: contain;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+#hero-dots {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.paragraph-section {
+    font-size: 16px;
+    font-weight: regular;
+    color: #424242;
+    margin: 8px 0 0 0;
+}
+
+/* Responsive de la Hero Home */
+@media screen and (max-width: 768px) {
+    #hero-home {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Section Novedades */
+
+#section-novedades {
+    position: relative; 
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    height: 100vh;
+}
+
+.N-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.N-text-wrapper div:first-child {
+    max-width: 409px;
+}
+
+.N-books-wrapper {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.N-book-card {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-cover {
+    width: 250px;
+    height: 312px;
+    /* overflow: hidden; */
+    text-align: center;
+}
+.book-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1F3F66;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.book-author {
+    margin-top: 8px;
+}
+
+.book-price {
+    font-size: 24px;
+    color: #1F3F66;
+    margin-top: 24px;
+}
+
+.N-wavy-light-blue {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+#N-wavy-light-blue {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/* Responsive de la Sección Novedades */
+@media screen and (max-width: 768px) {
+    #section-novedades {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Section descuentos */
+
+#section-descuentos {
+    position: relative; 
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100vh;
+}
+
+.D-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.D-img img {
+    width: 684px;
+    height: 684px;
+    bottom: -30px;
+}
+
+.D-text-wrapper {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.D-text-wrapper div:first-child {
+    max-width: 529px;
+}
+
+.subtitle {
+    font-size: 40px;
+    font-weight: bold;
+    color: #1F3F66;
+    margin-bottom: 16px;
+}
+
+.D-big-dark-blue-wavy-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    z-index: -2;
+}
+
+#D-big-dark-blue-wavy {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.D-big-light-blue-wavy {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    z-index: -1;
+}
+
+#D-big-light-blue-wavy {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: -32px;
+}
+
+/* Responsive de la Sección Descuentos */
+@media screen and (max-width: 768px) {
+    #section-descuentos {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Section: Bestsellers */
+#section-best-sellers {
+    position: relative; 
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+#BS-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+}
+
+#BS-right-wavy-shape {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* Responsive de la Sección Best Sellers */
+@media screen and (max-width: 768px) {
+    #section-best-sellers {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Section: Article Blog */
+#section-article-blog {
+    position: relative; 
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100vh;
+}
+
+
+
+.AB-text-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.AB-text-wrapper div:first-child {
+    max-width: 529px;;
+}
+
+
+.AB-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    overflow: hidden;
+}
+
+.AB-image {
+    object-fit: cover;  
+    height: 100%; 
+}
+
+.AB-circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    z-index: -2;
+}
+#AB-circles {
+    position: absolute;
+    left: 1150px;
+    bottom: 0;
+}
+
+/* Responsive de la Sección Article Blog */
+@media screen and (max-width: 768px) {
+    #section-article-blog {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/* Section: Comentarios Clientes */
+#section-comentarios-clientes {
+    position: relative; 
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100vh;
+}
+
+.CC-text-wrapper {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.CC-text-wrapper div:first-child {
+    max-width: 454px;
+}
+
+.CC-reviews-wrapper {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    color: #ededed;
+    font-size: 14px;
+    padding: 40px auto;
+}
+
+.review-impar-photo {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.review-impar {
+    background-color: #3771B8;
+    padding: 24px 40px;
+    border-radius: 16px;
+    max-width: 297px;
+    max-height: 208px;
+}
+
+.review-par-photo {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.review-par {
+    background-color: #87AFE0;
+    padding: 24px 40px;
+    border-radius: 16px;
+    max-width: 297px;
+    max-height: 208px;
+}
+
+.name-costumer {
+    font-weight: bold;
+}
+
+.photo-costumer-wrapper {
+    max-width: 56px;
+    max-height: 56px;
+}
+
+.photo-costumer {
+    width: 100%;
+    height: 100%;
+}
+
+.CC-wavy-light-blue {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    z-index: -2;
+}
+
+#CC-wavy-light-blue {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.color-dark-blue {
+    color: #1F3F66;
+}
+
+.copyright-wrapper {
+    margin-top: 58px;
+}
+
+/* Responsive de la Sección Comentarios Clientes */
+@media screen and (max-width: 768px) {
+    #section-comentarios-clientes {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Estilos del Footer */
+
+footer {
+    z-index: 10;
+    padding: 56px 0 40px;
+    background-color: white;
+    box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.social-media-icons-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media-icons-wrapper a{
+    color: #1F3F66;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-suscription-input{
+    border: 0;
+    background-color: #D9D9D9;
+    border-radius: 16px;
+    padding: 10px 16px;
+    width: 100%; 
+}
+
+#button-suscribe {
+    margin: 0;
+    transform: translateX(-32px);
+}
+
+
+/* Estilos página de libros */
+
+.section-books-banner {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-s-books {
+    width: 100%;
+}
+
+
+
+
+/* Estilos página de contacto */
+
+#contacto-ubicacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.C-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.C-text-wrapper div:first-child {
+    max-width: 520px;
+}
+
+.bookstore-illustration {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.bookstore-illustration div:first-child {
+    max-width: 559px ;
+}
+
+.bookstore-illustration-wrapper {
+    max-width: 560px;
+    max-height: 472px;
+}
+
+.bs-illustration {
+    width: 100%;
+    height: 100%;
+}
+
+#section-mapa-wrapper {
+    background-color: #1F3F66;
+}
+
+.map-title {
+    font-size: 56px;
+    color: #ededed;
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+
+/*
+.contacto-mapa-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+*/
+
+.title-contacto {
+    font-size: 44px;
+    font-weight: bold;
+    color: #1F3F66;
+    margin-bottom: 16px;
+}
+
+.contact-paragraph-thanks{
+    font-size: 18px;
+    color: #1F3F66;
+    font-weight: 600;
+}
+.contacto-mapa {
+    width: 539px;
+    height: 418px;
+}
+.contacto-mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.contact-wavies-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    z-index: -1;
+}
+#contact-left-top-wavy{
+    position: absolute;
+    left: 0;
+    top: 64px;
+    z-index: -1;
+}
+#contact-right-bottom-wavy{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.blue-space-left{
+    background-color: #1F3F66;
+    position: relative;
+}
+
+#white-circles{
+    position: absolute;
+    top: 40px;
+    right: -5px;
+}
+
+#C-left-wavy-shape{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+.contacto-formulario-wrapper h1{
+    font-weight: 600;
+    font-size: 56px;
+    color: #1F3F66;
+    margin-top: 108px;
+}
+
+#section-contacto-formulario {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100%;
+    
+
+}
+
+.contacto-formulario-wrapper {
+    margin-left: 80px;
+    min-width: 512px;
+}
+
+.form-label{
+    font-weight: 600;
+    font-size: 20px;
+    color: #1F3F66;
+}
+
+.input, .box-message{
+    border: 0;
+    background-color: #D9D9D9;
+    display: block;
+    border-radius: 16px;
+    padding: 10px 16px;
+    margin-top: 6px;
+    margin-bottom: 32px; 
+    width: 90%;
+}
+
+.box-message{
+    margin-bottom: 0;
+}
+
+.btn-group-wrapper{
+    width: 90%;
+    margin-bottom: 80px;
+}
+
+
+/* Responsive de la Página de Contacto 
+Sección Contacto Ubicación */
+
+@media screen and (max-width: 768px) {
+    #contacto-ubicacion {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: auto 80px;
+    }
+}
+
+/* Responsive de la Página de Contacto 
+Sección Contacto Formulario */
+
+@media screen and (max-width: 768px) {
+    #section-contacto-formulario {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

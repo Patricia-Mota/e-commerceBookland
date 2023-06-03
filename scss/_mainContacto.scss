@@ -1,0 +1,299 @@
+/* Estilos página de Contacto */
+
+/* Sección Visítanos */
+#contacto-ubicacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.C-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.invitation-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: $color-font-titles;
+}
+
+.C-text-wrapper div:first-child {
+    max-width: 650px;
+}
+
+.bookstore-illustration {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.bookstore-illustration div:first-child {
+    max-width: 559px ;
+}
+
+.bookstore-illustration-wrapper {
+    max-width: 560px;
+    max-height: 472px;
+}
+
+.bs-illustration {
+    width: 100%;
+    height: 100%;
+}
+
+/* Sección Mapa */
+
+#section-mapa {
+    height: 40%;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /*width: 100%;
+    background-image: url(../assets/img/SVGs/wavys-hero-home.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover; */
+    
+}
+
+
+.mapa-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F3F66;
+    width: 80%;
+    border-radius: 2rem;
+}
+
+.map {
+    width: 2024px;
+    height: 560px; 
+    padding: 32px; 
+}
+
+
+/* Sección Formulario */
+#section-contacto-formulario {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 56px;
+    overflow: hidden;
+    height: auto;
+   
+}
+
+.contact-image {
+    background-image: url(../assets/img/PNGs/contact-image.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 2rem;
+    height: 100%;
+}
+
+.contacto-formulario-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    margin: 2rem 1rem;
+    
+}
+    
+.form-label{
+    font-weight: 600;
+    font-size: 16px;
+    color: #1F3F66;
+}
+
+.input, .box-message{
+    border: 0;
+    background-color: #F6F8FA;
+    display: block;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-top: 6px;
+    margin-bottom: 32px; 
+    width: 600px;
+}
+
+.box-message{
+    margin-bottom: 0;
+}
+
+.btn-group-wrapper{
+    width: 600px;
+    margin-bottom: 80px;
+}
+
+
+/* Responsive de la Página de Contacto */ 
+
+
+/* Responsive Celulares */
+@media (max-width: 576px) {
+    #contacto-ubicacion {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        margin-bottom: 64px;
+    }
+
+    .C-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 32px auto;
+        max-width: 460px;
+    }
+
+    .invitation-title {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .paragraph-invitation-contacto {
+        font-size: 14px;
+    }
+
+    .bookstore-illustration div:first-child {
+        max-width: 460px;
+    }
+
+    .map {
+        height: 420px;
+        padding: 24px;
+    }
+
+    #section-contacto-formulario {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 56px;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .contact-image {
+        display: none;
+    }
+
+    .contacto-formulario-wrapper {
+        align-items: center;
+    }
+
+    .input {
+        width: 420px;
+    }
+
+    .box-message {
+        width: 420px;
+    }
+
+    .btn-group-wrapper {
+        width: 420px;
+    }
+
+    .cta-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 110px;
+        height: 35px;
+        padding: 4px 8px;
+        font-size: 14px;
+        margin-top: 16px;
+
+    }
+
+}
+
+
+
+/* Responsive Tablets */
+@media (max-width: 768px) {
+    #contacto-ubicacion {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        margin-bottom: 64px;
+    }
+
+    .C-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 32px auto;
+        max-width: 620px;
+    }
+
+    .invitation-title {
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .paragraph-invitation-contacto {
+        font-size: 16px;
+    }
+
+    .bookstore-illustration div:first-child {
+        max-width: 460px;
+    }
+
+    .map {
+        height: 420px;
+        padding: 24px;
+    }
+
+    #section-contacto-formulario {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 56px;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .contact-image {
+        display: none;
+    }
+
+    .contacto-formulario-wrapper {
+        align-items: center;
+    }
+
+    .input {
+        width: 420px;
+    }
+
+    .box-message {
+        width: 420px;
+    }
+
+    .btn-group-wrapper {
+        width: 420px;
+    }
+
+    .cta-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 110px;
+        height: 35px;
+        padding: 4px 8px;
+        font-size: 14px;
+        margin-top: 16px;
+
+    }
+    
+}
+

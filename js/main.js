@@ -2,30 +2,40 @@
 
 const librosDisponibles = [
   {
+    id: "b0001",
     nombre: "¿Por qué dormimos?",
     precio: 360,
+    imagen: "https://placehold.co/600x400",
   },
   {
+    id: "b0002",
     nombre: "Hábitos atómicos",
     precio: 299,
+    imagen: "https://placehold.co/600x400",
   },
   {
+    id: "b0003",
     nombre: "El diseño de las cosas cotidianas",
     precio: 625,
+    imagen: "https://placehold.co/600x400",
   },
   {
+    id: "b0004",
     nombre: "Una chica como ella",
     precio: 200,
+    imagen: "https://placehold.co/600x400",
   },
   {
+    id: "b0005",
     nombre: "Un bárbaro en París",
     precio: 350,
+    imagen: "https://placehold.co/600x400",
   },
 ];
 
 // Preguntarle al usuario qué libro quiere adquirir
 let totalAcumulado = 0;
-let repetir = true;
+let repetir = false;
 while (repetir) {
   const nombresLibros = librosDisponibles.map((libro) => libro.nombre);
   let listaDeLibros = nombresLibros.join("\n- ");

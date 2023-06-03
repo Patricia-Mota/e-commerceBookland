@@ -1,0 +1,78 @@
+
+/*Estilos Sección Autores */
+
+/*.principal-image-autores-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.principal-image-autores {
+    width: 100%;
+} 
+*/
+
+#section-autores-destacados {
+    height: auto;
+}
+
+.autores-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: $color-font-titles;
+    padding : 1rem;
+    margin: 1rem;
+}
+
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
+.card .card-img, .card-v .card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    position: absolute;
+    transition: all 1s;
+    filter: brightness(65%);
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    border-radius: 16px;
+}
+
+.card, .card-v {
+    border-radius: 16px;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.card-v h3 {
+    position: relative;
+    top: 70%;
+    font-weight: normal;
+    font-size: 28px;
+    word-wrap: break-word;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+  
+
