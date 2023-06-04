@@ -4,34 +4,78 @@ const librosDisponibles = [
   {
     id: "b0001",
     nombre: "¿Por qué dormimos?",
+    autor: "",
     precio: 360,
-    imagen: "https://placehold.co/600x400",
+    imagen: "../assets/img/Libros/por-que-dormimos.jpeg",
   },
   {
     id: "b0002",
     nombre: "Hábitos atómicos",
+    autor: "",
     precio: 299,
-    imagen: "https://placehold.co/600x400",
+    imagen: "../assets/img/Header/atomic-habits-img-2.png",
   },
   {
     id: "b0003",
     nombre: "El diseño de las cosas cotidianas",
+    autor: "",
     precio: 625,
-    imagen: "https://placehold.co/600x400",
+    imagen: "../assets/img/Libros/the-design-of-everyday-things.jpeg",
   },
   {
     id: "b0004",
     nombre: "Una chica como ella",
+    autor: "",
     precio: 200,
-    imagen: "https://placehold.co/600x400",
+    imagen: "../assets/img/Libros/una-chica-como-ella.jpeg",
   },
   {
     id: "b0005",
     nombre: "Un bárbaro en París",
+    autor: "",
     precio: 350,
-    imagen: "https://placehold.co/600x400",
+    imagen: "../assets/img/Libros/un-barbaro-en-paris.jpeg",
+  },
+  {
+    id: "b0006",
+    nombre: "Tres meses",
+    autor: "",
+    precio: 370,
+    imagen: "../assets/img/Libros/tres-meses.png",
   },
 ];
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let totalSuma = 0;
+for (let libroEnCarrito of carrito) {
+  totalSuma = totalSuma + libroEnCarrito.cantidad;
+}
+const totalCarrito = document.querySelector("#total-carrito");
+totalCarrito.innerText = totalSuma;
+
+librosDisponibles.forEach((libro) => {
+  const libroForm = document.querySelector(`#${libro.id}`);
+  libroForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const cantidad = parseInt(e.target.cantidadLibros.value);
+    carrito.push({
+      id: libro.id,
+      nombre: libro.nombre,
+      autor: libro.autor,
+      precio: libro.precio,
+      imagen: libro.imagen,
+      cantidad: cantidad,
+    });
+
+    let totalSuma = 0;
+    for (let libroEnCarrito of carrito) {
+      totalSuma = totalSuma + libroEnCarrito.cantidad;
+    }
+    const totalCarrito = document.querySelector("#total-carrito");
+    totalCarrito.innerText = totalSuma;
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  });
+});
 
 // Preguntarle al usuario qué libro quiere adquirir
 let totalAcumulado = 0;
@@ -73,12 +117,6 @@ while (repetir) {
     repetir = confirm("¿Deseas adquirir otro título?");
   }
 }
-
-alert(
-  "¡Gracias por comprar en nuestra tienda en línea! Su total fue de: $" +
-    totalAcumulado +
-    ".00 MXN"
-);
 
 // Función para obtener el precio del libro
 function obtenerPrecioLibro(libroSeleccionado) {

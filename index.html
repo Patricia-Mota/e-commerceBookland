@@ -71,11 +71,16 @@
             </ul>
 
             <div class="carrito-mi-cuenta-wrapper d-flex align-items-center">
-                <img
-                    src="./assets/img/Iconos/carrito.svg"
-                    width="24px"
-                    alt="Carrito de compra"
-                />
+              <a href="./pages/carrito.html" id="carrito">
+                  <div>
+                    <img
+                        src="./assets/img/Iconos/carrito.svg"
+                        width="24px"
+                        alt="Carrito de compra"
+                    />
+                    <span id="total-carrito" class="oculto">0</span>
+                </div>
+                </a>
                 <p class="mb-0 ms-4">Mi cuenta</p>
             </div>
 
@@ -144,6 +149,12 @@
                 <div class="book-name">Una chica como ella</div>
                 <div class="book-author">Marc Levy</div>
                 <div class="book-price">$ 200.00 MXN</div>
+                <div class="book-buy-interaction">
+                  <form id="b0004">
+                    <input type="number" name="cantidadLibros" min="1" max="100" value="1">
+                    <button type="submit">Agregar a carrito</button>
+                  </form>
+                </div>
               </div>
               <div class="N-book-card2">
                 <div class="book-cover">
@@ -156,6 +167,12 @@
                 <div class="book-name">Un bárbaro en París</div>
                 <div class="book-author">Mario Vargas Llosa</div>
                 <div class="book-price">$ 350.00 MXN</div>
+                <div class="book-buy-interaction">
+                  <form id="b0005">
+                    <input type="number" name="cantidadLibros" min="1" max="100" value="1">
+                    <button type="submit">Agregar a carrito</button>
+                  </form>
+                </div>
               </div>
               <div class="N-book-card3">
                 <div class="book-cover">
@@ -168,6 +185,12 @@
                 <div class="book-name">Tres meses</div>
                 <div class="book-author">Joana Marcús</div>
                 <div class="book-price">$ 370.00 MXN</div>
+                <div class="book-buy-interaction">
+                  <form id="b0006">
+                    <input type="number" name="cantidadLibros" min="1" max="100" value="1">
+                    <button type="submit">Agregar a carrito</button>
+                  </form>
+                </div>
               </div>
             </div>
 
@@ -230,6 +253,12 @@
                     <div class="book-name">El diseño de las<br> cosas cotidianas</div>
                     <div class="book-author">Donald Norman</div>
                     <div class="book-price">$ 625.00 MXN</div>
+                    <div class="book-buy-interaction">
+                      <form id="b0003">
+                        <input type="number" name="cantidadLibros" min="1" max="100" value="1">
+                        <button type="submit">Agregar a carrito</button>
+                      </form>
+                    </div>
                 </div>
                 <div class="N-book-card2">
                     <div class="book-cover">
@@ -242,6 +271,12 @@
                     <div class="book-name"><br>Hábitos atómicos</div>
                     <div class="book-author">James Clear</div>
                     <div class="book-price">$ 299.00 MXN</div>
+                    <div class="book-buy-interaction">
+                      <form id="b0002">
+                        <input type="number" name="cantidadLibros" min="1" max="100" value="1">
+                        <button type="submit">Agregar a carrito</button>
+                      </form>
+                    </div>
                 </div>
                 <div class="N-book-card3">
                     <div class="book-cover">
@@ -254,6 +289,12 @@
                     <div class="book-name"><br>¿Por qué dormimos?</div>
                     <div class="book-author">Matthew Walker</div>
                     <div class="book-price">$ 360.00 MXN</div>
+                    <div class="book-buy-interaction">
+                      <form id="b0001">
+                        <input type="number" name="cantidadLibros" min="1" max="100" value="1">
+                        <button type="submit">Agregar a carrito</button>
+                      </form>
+                    </div>
                 </div>
 
             </div>
