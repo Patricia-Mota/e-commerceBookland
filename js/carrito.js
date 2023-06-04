@@ -35,30 +35,38 @@ totalSpan.innerText = `${new Intl.NumberFormat("es-mx", {
 carrito.forEach((libro) => {
   const contenedorListLibros = document.querySelector("#lista-libros");
   const rowLibro = document.createElement("div");
+  rowLibro.className = "libroDatosWrapper";
 
   const rowLibroImg = document.createElement("img");
   rowLibroImg.src = libro.imagen;
   rowLibroImg.alt = libro.nombre;
+  rowLibroImg.className = "imgLibroAComprar";
 
   const rowLibroTitle = document.createElement("h3");
   rowLibroTitle.innerText = libro.nombre;
+  rowLibroTitle.className = "titleLibro";
 
   const rowLibroAuthor = document.createElement("p");
   rowLibroAuthor.innerText = libro.autor;
+  rowLibroAuthor.className = "autorLibro";
 
   const rowLibroUnitPrice = document.createElement("p");
   rowLibroUnitPrice.innerText = `$${libro.precio} MXN`;
+  rowLibroUnitPrice.className = "costosLibros";
 
   const rowLibroQuantity = document.createElement("input");
   rowLibroQuantity.min = 1;
   rowLibroQuantity.max = 1;
   rowLibroQuantity.value = libro.cantidad;
+  rowLibroQuantity.className = "cantidadLibros";
 
   const rowLibroDelete = document.createElement("button");
   rowLibroDelete.innerText = "Eliminar";
+  rowLibroDelete.className = "boton";
 
   const rowLibroTotal = document.createElement("p");
   rowLibroTotal.innerText = `$${libro.precio * libro.cantidad} MXN`;
+  rowLibroTotal.className = "costosLibros";
 
   rowLibro.appendChild(rowLibroImg);
   rowLibro.appendChild(rowLibroTitle);
