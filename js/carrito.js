@@ -1,3 +1,5 @@
+emailjs.init("KKnHOiLUbVkoNqm-r");
+
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 function renderList() {
@@ -66,7 +68,6 @@ function renderList() {
     rowLibroDelete.innerText = "Eliminar";
     rowLibroDelete.className = "boton";
     rowLibroDelete.addEventListener("click", (e) => {
-      console.log("asdf");
       carrito.splice(index, 1);
       localStorage.setItem("carrito", JSON.stringify(carrito));
       contenedorListLibros.innerHTML = "";
@@ -90,3 +91,23 @@ function renderList() {
 }
 
 renderList();
+
+const formPagar = document.querySelector("#form-pagar");
+formPagar.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = document.querySelector("#to-email").value;
+
+  const precioSubTotal = document.querySelector("#subtotal").innerText;
+  const iva = document.querySelector("#iva").innerText;
+  const total = document.querySelector("#total").innerText;
+  const resumen = `Subtotal: ${precioSubTotal}
+  IVA: ${iva}
+  Total: ${total}`;
+
+  const templateParams = {
+    to_email: email,
+    resumen_compra: resumen,
+  };
+  await emailjs.send("facturas_test", "facturas_test", templateParams);
+  alert("¡Gracias por tu compra! Te hemos enviado un correo de confirmación");
+});

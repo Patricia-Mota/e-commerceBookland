@@ -25,6 +25,11 @@
       src="https://kit.fontawesome.com/d3c2937a4b.js"
       crossorigin="anonymous"
     ></script>
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
   </head>
 
   <body>
@@ -102,12 +107,18 @@
       <div>
         <h1 class="pageTitle">Carrito de compras</h1>
         <div id="lista-libros"></div>
-        <div class="breakdownWrapper">
-          <p>Subtotal: <span id="subtotal">$360</span></p>
-          <p>IVA: <span id="iva">$360</span></p>
-          <p>Total: <span id="total">$360</span></p>
-          <button class="boton">Pagar</button>
-        </div>
+        <form id="form-pagar">
+          <div class="breakdownWrapper">
+            <p>Subtotal: <span id="subtotal">$360</span></p>
+            <p>IVA: <span id="iva">$360</span></p>
+            <p>Total: <span id="total">$360</span></p>
+            <p>
+              <label for="to-email">Tu correo: </label>
+              <input id="to-email" type="email" required />
+            </p>
+            <button type="submit" class="boton">Pagar</button>
+          </div>
+        </form>
       </div>
     </main>
 

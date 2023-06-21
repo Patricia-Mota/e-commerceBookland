@@ -151,15 +151,16 @@ section {
 }
 
 .cta-btn {
-  background-color: #1F3F66;
+  background-color: #1f3f66;
   margin-top: 40px;
   border: 0;
   border-radius: 32px;
   padding: 12px 32px;
 }
 
-.cta-btn:hover, .cta-btn:active {
-  background-color: #9CBFE9 !important;
+.cta-btn:hover,
+.cta-btn:active {
+  background-color: #9cbfe9 !important;
 }
 
 .wavys-hero-home {
@@ -350,7 +351,7 @@ section {
 .book-name {
   font-size: 18px;
   font-weight: bold;
-  color: #1F3F66;
+  color: #1f3f66;
   margin-top: 24px;
   text-align: center;
 }
@@ -361,7 +362,7 @@ section {
 
 .book-price {
   font-size: 24px;
-  color: #1F3F66;
+  color: #1f3f66;
   margin-top: 24px;
 }
 
@@ -748,7 +749,7 @@ section {
 }
 
 .review-impar {
-  background-color: #3771B8;
+  background-color: #3771b8;
   padding: 24px 40px;
   border-radius: 16px;
   max-width: 297px;
@@ -763,7 +764,7 @@ section {
 }
 
 .review-par {
-  background-color: #87AFE0;
+  background-color: #87afe0;
   padding: 24px 40px;
   border-radius: 16px;
   max-width: 297px;
@@ -800,7 +801,7 @@ section {
 }
 
 .color-dark-blue {
-  color: #1F3F66;
+  color: #1f3f66;
 }
 
 .copyright-wrapper {
@@ -837,6 +838,29 @@ section {
     top: 160px;
   }
 }
+.carrito-btn {
+  padding: 0;
+  background-color: transparent;
+  color: #1F3F66;
+  text-decoration: underline;
+  margin: 0;
+}
+
+.carrito-btn:hover,
+.carrito-btn:active {
+  background-color: transparent !important;
+  color: #9cbfe9 !important;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+  gap: 8px;
+}
+
 /* Estilos página de libros */
 .bannersLibros {
   width: 100%;
@@ -1560,6 +1584,7 @@ footer {
 .pageTitle {
   text-align: center;
   margin: 24px 0 0 0;
+  color: #1F3F66;
 }
 
 .libroDatosWrapper {
@@ -1602,6 +1627,11 @@ footer {
   align-items: end;
   margin-right: 60px;
   margin-bottom: 64px;
+}
+
+form {
+  display: block;
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

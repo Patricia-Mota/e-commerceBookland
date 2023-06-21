@@ -1,0 +1,44 @@
+[
+  {
+    "id": "b0001",
+    "nombre": "¿Por qué dormimos?",
+    "autor": "Matthew Walker",
+    "precio": 360,
+    "imagen": "../assets/img/Libros/por-que-dormimos.jpeg"
+  },
+  {
+    "id": "b0002",
+    "nombre": "Hábitos atómicos",
+    "autor": "James Clear",
+    "precio": 299,
+    "imagen": "../assets/img/Header/atomic-habits-img-2.png"
+  },
+  {
+    "id": "b0003",
+    "nombre": "El diseño de las cosas cotidianas",
+    "autor": "Donald A. Norman",
+    "precio": 625,
+    "imagen": "../assets/img/Libros/the-design-of-everyday-things.jpeg"
+  },
+  {
+    "id": "b0004",
+    "nombre": "Una chica como ella",
+    "autor": "Marc Levy",
+    "precio": 200,
+    "imagen": "../assets/img/Libros/una-chica-como-ella.jpeg"
+  },
+  {
+    "id": "b0005",
+    "nombre": "Un bárbaro en París",
+    "autor": "Un bárbaro en París",
+    "precio": 350,
+    "imagen": "../assets/img/Libros/un-barbaro-en-paris.jpeg"
+  },
+  {
+    "id": "b0006",
+    "nombre": "Tres meses",
+    "autor": "Joana Marcús",
+    "precio": 370,
+    "imagen": "../assets/img/Libros/tres-meses.png"
+  }
+]

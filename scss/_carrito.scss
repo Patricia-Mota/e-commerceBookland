@@ -3,6 +3,7 @@
 .pageTitle {
   text-align: center;
   margin: 24px 0 0 0;
+  color: $color-font-titles;
 }
 
 .libroDatosWrapper {
@@ -51,4 +52,9 @@
   align-items: end;
   margin-right: 60px;
   margin-bottom: 64px;
+}
+
+form {
+  display: block;
+  padding: 0;
 }
